@@ -5,7 +5,14 @@
 
 // Desktops
 @include mediaLg {
-
+main{
+  h1.lg-heading {
+    font-size: 5rem;
+  }
+  h2.sm-heading{
+    width: 60%;
+  }
+}
 }
 
 // Tablets

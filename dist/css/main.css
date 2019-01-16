@@ -93,6 +93,12 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main h1.lg-heading {
+    font-size: 5rem; }
+  main h2.sm-heading {
+    width: 60%; } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
