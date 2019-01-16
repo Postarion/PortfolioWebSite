@@ -7,18 +7,18 @@
   transition: all 0.6s ease-out; }
   .menu-btn .btn-line {
     width: 32px;
-    height: 5px;
+    height: 4px;
     margin: 0 0 7px 0;
     background: #fff;
     transition: all 0.6s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 5px); }
+      transform: rotate(45deg) translate(6px, 4px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(9px, -10px); }
+      transform: rotate(-45deg) translate(10.5px, -9px); }
 
 .menu {
   position: fixed;
