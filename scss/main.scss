@@ -14,7 +14,9 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
-
+#about{
+  padding-top:16px; 
+}
 //Headings
 h1, h2, h3{
   margin: 0;
@@ -74,11 +76,13 @@ main{
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 
+  grid-template-areas:
   'bioimage bio bio'
+  'title title title'
   'job1 job2 job3';
-  grid-template-columns: reapeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
 
+  // Parameters
   .bio-image{
     grid-area: bioimage;
     margin: auto;
@@ -89,6 +93,24 @@ main{
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+  }
+  
+  .job-title{
+    grid-area: title;
+    margin: auto;
+    padding-top: 0.5vh; 
+    font-size: 2rem;
+  }
+  
+  h6{
+    color: $secondary-color;
+    margin-top:10px;
+  }
+  
+  .job{
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
   }
   
   .job-1{
@@ -102,12 +124,47 @@ main{
   .job-3{
     grid-area: job3;
   }
-  
-  .job{
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+}
+
+//Work Projects
+.projects{
+  display: grid;
+  grid-gap: 0.6rem;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  img{
+    width: 100%;
+    border: 3px #fff solid;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
   }
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover{
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark{
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light{
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
 }
 
 #main-footer{
