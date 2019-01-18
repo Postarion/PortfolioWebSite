@@ -291,7 +291,9 @@ main {
 
 @media screen and (max-width: 500px) {
   body#bg-img {
-    background: url(../img/background_sm.jpg); }
+    background: url(../img/background_sm.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
   body main {
     padding: 2rem; }
     body main#about, body main#work, body main#contact {
