@@ -103,8 +103,9 @@ main{
   }
   
   h6{
-    color: $secondary-color;
+    color: lighten($secondary-color, 10);
     margin-top:10px;
+    font-size: 14px;
   }
   
   .job{
