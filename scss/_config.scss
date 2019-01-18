@@ -11,22 +11,9 @@ $background-opacity: 0.6;
 @mixin background {
   @if $show-home-image{
     &#bg-img {
-      &:before{
-        content: "";
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background: $home-image no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        z-index: -10;
-      }
-
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
 
       &:after {
         content:'';
