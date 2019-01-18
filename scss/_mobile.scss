@@ -87,7 +87,7 @@ main{
       padding-top: 4rem; 
     }
 
-    #homeh1{
+    &#homeh1{
       margin-top: 10vh;
     }
 
@@ -102,5 +102,13 @@ main{
     .projects{
       grid-template-columns: 1fr;
     } 
+    .boxes{
+      div{
+        font-size: 1.5rem;
+        border: 2px #fff solid;
+        padding: 1.5rem 1.5rem;
+        margin-bottom: 3rem;
+      }
+    }
   }
 }
