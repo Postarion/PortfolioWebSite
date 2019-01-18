@@ -17,15 +17,16 @@ $background-opacity: 0.6;
         position: fixed;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background: $home-image no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        z-index: -2;
+        z-index: -10;
       }
+
 
       &:after {
         content:'';
@@ -34,7 +35,7 @@ $background-opacity: 0.6;
         right: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
+        z-index: -5;
         background: rgba($primary-color, $background-opacity);
       }
     }
