@@ -29,26 +29,11 @@ const Gb4 = new Audio("sound/Gb4.mp3");
 const playSound = audio => {
   const clone = audio.cloneNode();
   clone.play();
-  setTimeout(() => (clone.volume = 0.8).bind(this), 400);
-  setTimeout(() => (clone.volume = 0.6).bind(this), 800);
-  setTimeout(() => (clone.volume = 0.4).bind(this), 1200);
-  setTimeout(() => (clone.volume = 0.2).bind(this), 1600);
-  setTimeout(() => (clone.volume = 0).bind(this), 2000);
-};
-
-Function.prototype.bind = function(parent){
-  var f = this;
-  var args = [];
-
-  for (var a = 1; a < arguments.length; a++) {
-      args[args.length] = arguments[a];
-  };
-
-  var temp = function() {
-     return f.apply(parent, args);
-  };
-
-  return(temp);
+  setTimeout(() => (clone.volume = 0.8), 400);
+  setTimeout(() => (clone.volume = 0.6), 800);
+  setTimeout(() => (clone.volume = 0.4), 1200);
+  setTimeout(() => (clone.volume = 0.2), 1600);
+  setTimeout(() => (clone.volume = 0), 2000);
 };
 
 //A4
