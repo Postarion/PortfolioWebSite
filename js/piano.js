@@ -16,16 +16,6 @@ const F4 = new Audio("sound/F4.mp3");
 const G4 = new Audio("sound/G4.mp3");
 const Gb4 = new Audio("sound/Gb4.mp3");
 
-// const playSound = audio => {
-//   const clone = audio.cloneNode();
-//   clone.play();
-//   window.setTimeout(() => (clone.volume = 0.8), 400);
-//   window.setTimeout(() => (clone.volume = 0.6), 800);
-//   window.setTimeout(() => (clone.volume = 0.4), 1200);
-//   window.setTimeout(() => (clone.volume = 0.2), 1600);
-//   window.setTimeout(() => (clone.volume = 0), 2000);
-// };
-
 const playSound = audio => {
   const clone = audio.cloneNode();
   clone.play();
