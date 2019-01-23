@@ -19,11 +19,11 @@ const Gb4 = new Audio("sound/Gb4.mp3");
 const playSound = audio => {
   const clone = audio.cloneNode();
   clone.play();
-  setTimeout(() => (clone.volume = 0.8), 400)
-  setTimeout(() => (clone.volume = 0.6), 800)
-  setTimeout(() => (clone.volume = 0.4), 1200)
-  setTimeout(() => (clone.volume = 0.2), 1600)
-  setTimeout(() => (clone.volume = 0), 2000)
+  window.setTimeout(() => (clone.volume = 0.8), 400)
+  window.setTimeout(() => (clone.volume = 0.6), 800)
+  window.setTimeout(() => (clone.volume = 0.4), 1200)
+  window.setTimeout(() => (clone.volume = 0.2), 1600)
+  window.setTimeout(() => (clone.volume = 0), 2000)
 };
 
 //A4
@@ -31,7 +31,7 @@ const A4tab = document.querySelector(".A4");
 const playA4 = () =>{
   playSound(A4);
   A4tab.classList.add("active");
-  setTimeout(() => A4tab.classList.remove("active"), 200);
+  window.setTimeout(() => A4tab.classList.remove("active"), 200);
 };
 A4tab.addEventListener("click", playA4);
 

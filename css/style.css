@@ -4,9 +4,11 @@ body{
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+  font-size: 3rem;
 }
 .title{
   width: 100%;
