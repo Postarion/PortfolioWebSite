@@ -26,209 +26,90 @@ const playSound = audio => {
   setTimeout(() => (clone.volume = 0), 2000);
 };
 
-//A4
-const A4tab = document.querySelector(".A4");
-const playA4 = () =>{
-  playSound(A4);
-  A4tab.classList.add("active");
-  window.setTimeout(() => A4tab.classList.remove("active"), 200);
+function tabCreator(name, posDiv) {
+  const tab = document.querySelector(`${posDiv}`);
+  const play = () =>{
+    playSound(name);
+    tab.classList.add("active");
+    window.setTimeout(() => tab.classList.remove("active"), 200);
+  };
+return tab.addEventListener("click", play);
 };
-A4tab.addEventListener("click", playA4);
 
-//Ab4
-const Ab4tab = document.querySelector(".Ab4");
-const playAb4 = () =>{
-  playSound(Ab4);
-  Ab4tab.classList.add("active");
-  setTimeout(() => Ab4tab.classList.remove("active"), 200);
+function play(name, posDiv){
+  const tab = document.querySelector(`${posDiv}`);
+  playSound(name);
+  tab.classList.add("active");
+  window.setTimeout(() => tab.classList.remove("active"), 200);
 };
-Ab4tab.addEventListener("click", playAb4);
 
-//b4
-const B4tab = document.querySelector(".B4");
-const playB4 = () =>{
-  playSound(B4);
-  B4tab.classList.add("active");
-  setTimeout(() => B4tab.classList.remove("active"), 200);
-};
-B4tab.addEventListener("click", playB4);
-
-//Bb4
-const Bb4tab = document.querySelector(".Bb4");
-const playBb4 = () =>{
-  playSound(Bb4);
-  Bb4tab.classList.add("active");
-  setTimeout(() => Bb4tab.classList.remove("active"), 200);
-};
-Bb4tab.addEventListener("click", playBb4);
-
-//C4
-const C4tab = document.querySelector(".C4");
-const playC4 = () =>{
-  playSound(C4);
-  C4tab.classList.add("active");
-  setTimeout(() => C4tab.classList.remove("active"), 200);
-};
-C4tab.addEventListener("click", playC4);
-
-//C4
-const C5tab = document.querySelector(".C5");
-const playC5 = () =>{
-  playSound(C5);
-  C5tab.classList.add("active");
-  setTimeout(() => C5tab.classList.remove("active"), 200);
-};
-C5tab.addEventListener("click", playC5);
-
-//D4
-const D4tab = document.querySelector(".D4");
-const playD4 = () =>{
-  playSound(D4);
-  D4tab.classList.add("active");
-  setTimeout(() => D4tab.classList.remove("active"), 200);
-};
-D4tab.addEventListener("click", playD4);
-
-//D5
-const D5tab = document.querySelector(".D5");
-const playD5 = () =>{
-  playSound(D5);
-  D5tab.classList.add("active");
-  setTimeout(() => D5tab.classList.remove("active"), 200);
-};
-D5tab.addEventListener("click", playD5);
-
-//Db4
-const Db4tab = document.querySelector(".Db4");
-const playDb4 = () =>{
-  playSound(Db4);
-  Db4tab.classList.add("active");
-  setTimeout(() => Db4tab.classList.remove("active"), 200);
-};
-Db4tab.addEventListener("click", playDb4);
-
-//Db5
-const Db5tab = document.querySelector(".Db5");
-const playDb5 = () =>{
-  playSound(Db5);
-  Db5tab.classList.add("active");
-  setTimeout(() => Db5tab.classList.remove("active"), 200);
-};
-Db5tab.addEventListener("click", playDb5);
-
-//E4
-const E4tab = document.querySelector(".E4");
-const playE4 = () =>{
-  playSound(E4);
-  E4tab.classList.add("active");
-  setTimeout(() => E4tab.classList.remove("active"), 200);
-};
-E4tab.addEventListener("click", playE4);
-
-//E5
-const E5tab = document.querySelector(".E5");
-const playE5 = () =>{
-  playSound(E5);
-  E5tab.classList.add("active");
-  setTimeout(() => E5tab.classList.remove("active"), 200);
-};
-E5tab.addEventListener("click", playE5);
-
-//Eb4
-const Eb4tab = document.querySelector(".Eb4");
-const playEb4 = () =>{
-  playSound(Eb4);
-  Eb4tab.classList.add("active");
-  setTimeout(() => Eb4tab.classList.remove("active"), 200);
-};
-Eb4tab.addEventListener("click", playEb4);
-
-//Eb5
-const Eb5tab = document.querySelector(".Eb5");
-const playEb5 = () =>{
-  playSound(Eb5);
-  Eb5tab.classList.add("active");
-  setTimeout(() => Eb5tab.classList.remove("active"), 200);
-};
-Eb5tab.addEventListener("click", playEb5);
-
-//F4
-const F4tab = document.querySelector(".F4");
-const playF4 = () =>{
-  playSound(F4);
-  F4tab.classList.add("active");
-  setTimeout(() => F4tab.classList.remove("active"), 200);
-};
-F4tab.addEventListener("click", playF4);
-
-//G4
-const G4tab = document.querySelector(".G4");
-const playG4 = () =>{
-  playSound(G4);
-  G4tab.classList.add("active");
-  setTimeout(() => G4tab.classList.remove("active"), 200);
-};
-G4tab.addEventListener("click", playG4);
-
-//Gb4
-const Gb4tab = document.querySelector(".Gb4");
-const playGb4 = () =>{
-  playSound(Gb4);
-  Gb4tab.classList.add("active");
-  setTimeout(() => Gb4tab.classList.remove("active"), 200);
-};
-Gb4tab.addEventListener("click", playGb4);
-
+tabCreator(A4,'.A4');
+tabCreator(Ab4,'.Ab4');
+tabCreator(B4,'.B4');
+tabCreator(Bb4,'.Bb4');
+tabCreator(C4,'.C4');
+tabCreator(C5,'.C5');
+tabCreator(D4,'.D4');
+tabCreator(D5,'.D5');
+tabCreator(Db4,'.Db4');
+tabCreator(Db5,'.Db5');
+tabCreator(E4,'.E4');
+tabCreator(E5,'.E5');
+tabCreator(Eb4,'.Eb4');
+tabCreator(Eb5,'.Eb5');
+tabCreator(F4,'.F4');
+tabCreator(G4,'.G4');
+tabCreator(Gb4,'.Gb4');
 
 window.addEventListener("keydown", ({ keyCode }) => {
   // Press A
-  if (keyCode === 65) return playC4();
+  if (keyCode === 65) return play(C4, '.C4');
 
   // Press W
-  if (keyCode === 87) return playDb4();
+  if (keyCode === 87) return play(Db4, '.Db4');
 
   // Press S
-  if (keyCode === 83) return playD4();
+  if (keyCode === 83) return play(D4, '.D4');
 
   // Press E
-  if (keyCode === 69) return playEb4();
+  if (keyCode === 69) return play(Eb4, '.Eb4');
 
   // Press D
-  if (keyCode === 68) return playE4();
+  if (keyCode === 68) return play(E4, '.E4');
 
   // Press F
-  if (keyCode === 70) return playF4();
+  if (keyCode === 70) return play(F4, '.F4');
 
   // Press T
-  if (keyCode === 84) return playGb4();
+  if (keyCode === 84) return play(Gb4, '.Gb4');
 
   // Press G
-  if (keyCode === 71) return playG4();
+  if (keyCode === 71) return play(G4, '.G4');
 
   // Press Y
-  if (keyCode === 89) return playAb4();
+  if (keyCode === 89) return play(Ab4, '.Ab4');
 
   // Press H
-  if (keyCode === 72) return playA4();
+  if (keyCode === 72) return play(A4, '.A4');
 
   // Press U
-  if (keyCode === 85) return playBb4();
+  if (keyCode === 85) return play(Bb4, '.Bb4');
 
   // Press J
-  if (keyCode === 74) return playB4();
+  if (keyCode === 74) return play(B4, '.B4');
 
   // Press K
-  if (keyCode === 75) return playC5();
+  if (keyCode === 75) return play(C5, '.C5');
 
   // Press L
-  if (keyCode === 79) return playDb5();
+  if (keyCode === 79) return play(Db5, '.Db5');
 
   // Press O
-  if (keyCode === 76) return playD5();
+  if (keyCode === 76) return play(D5, '.D5');
 
   // Press P
-  if (keyCode === 80) return playEb5();
+  if (keyCode === 80) return play(Eb5, '.Eb5');
 
   // Press ;
-  if (keyCode === 59) return playE5();
+  if (keyCode === 59) return play(E5, '.E5');
 }); 
