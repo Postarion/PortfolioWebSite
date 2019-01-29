@@ -117,6 +117,8 @@ body {
       background: rgba(126, 126, 126, 0.6); }
   body#bg-about {
     background: #7e7e7e; }
+  body#bg-piano {
+    background: #1b1a1a; }
 
 #about {
   padding-top: 16px; }
@@ -301,14 +303,16 @@ main {
     body main#homeh1 {
       margin-top: 10vh; }
     body main h1.lg-heading {
-      font-size: 4rem; }
+      font-size: 16vw; }
     body main h2.sm-heading {
       font-size: 1.5rem; }
     body main .projects {
       grid-template-columns: 1fr; }
     body main .boxes div {
-      font-size: 1.3rem;
+      font-size: 5.5vw;
       border: 2px #fff solid;
-      padding: 1.5rem 1.5rem;
+      padding: 3vw 3vw;
       margin-bottom: 3rem;
-      width: 100%; } }
+      width: 100%; }
+  .menu .nav-link {
+    padding: 0.5rem 0; } }

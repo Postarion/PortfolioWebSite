@@ -100,7 +100,7 @@ main{
     }
 
     h1.lg-heading{
-      font-size: 4rem;
+      font-size: 16vw;
     }
 
     h2.sm-heading{
@@ -112,13 +112,19 @@ main{
     } 
     .boxes{
       div{
-        font-size: 1.3rem;
+        font-size: 5.5vw;
         border: 2px #fff solid;
-        padding: 1.5rem 1.5rem;
+        padding: 3vw 3vw;
         margin-bottom: 3rem;
         width: 100%;
       }
     }
+  }
+}
+
+.menu{
+  .nav-link {
+    padding: 0.5rem 0;
   }
 }
 }
